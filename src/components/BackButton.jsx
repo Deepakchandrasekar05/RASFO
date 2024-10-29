@@ -16,11 +16,12 @@ const BackButton = () => {
       startIcon={<ArrowBackIcon />}
       onClick={goBack}
       sx={{
-        marginBottom: 2,
+        marginBottom: 5,
         color: "#fff",
         bgcolor: "#444",
+        color: "#fff",
         textAlign: "left",
-        justifyContent: "flex-end",
+        justifyContent: "flex-start",
         "&:hover": { bgcolor: "#555" },
       }}
     >
