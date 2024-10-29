@@ -1,12 +1,12 @@
 import React from "react";
-import { Card, CardContent, Typography, Box, IconButton } from "@mui/material";
+import { Card, CardContent, Typography, Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const FolderCard = ({ title, images, size, previewImage, paperId }) => {
   const navigate = useNavigate();
 
   const handleCardClick = () => {
-    navigate(`/paper/${paperId}`);
+    navigate(`/document-viewer/${paperId}`);
   };
 
   return (
@@ -51,7 +51,6 @@ const FolderCard = ({ title, images, size, previewImage, paperId }) => {
         <Box sx={{ display: "flex", justifyContent: "space-between", mt: 2 }}>
           <Typography variant="body2">{images} images</Typography>
           <Typography variant="body2">{size}</Typography>
-          
         </Box>
       </CardContent>
     </Card>

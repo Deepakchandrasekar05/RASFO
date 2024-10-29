@@ -10,7 +10,12 @@ const Sidebar = ({ toggleSidebar }) => {
   return (
     <List>
       {/* My Projects */}
-      <ListItem button component={Link} to="/my-projects" onClick={toggleSidebar}>
+      <ListItem
+        button
+        component={Link}
+        to="/my-projects"
+        onClick={toggleSidebar}
+      >
         <ListItemIcon>
           <FolderIcon sx={{ color: "#fff" }} />
         </ListItemIcon>

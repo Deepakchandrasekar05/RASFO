@@ -25,6 +25,13 @@
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.5",
     "@mui/material": "^6.1.5",
-    "react-router-dom": "^6.27.0"
+    "@simplepdf/react-embed-pdf": "^1.8.1",
+    "pdfjs-dist": "^4.7.76",
+    "react-flow-renderer": "^10.3.17",
+    "react-konva": "^18.2.10",
+    "react-latex-next": "^3.0.0",
+    "react-pdf": "^9.1.1",
+    "react-router-dom": "^6.27.0",
+    "simple-pdf-viewer": "^2.0.3"
   }
 }
