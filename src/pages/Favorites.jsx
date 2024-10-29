@@ -1,13 +1,17 @@
 import React from "react";
 import { Box, Typography, Button, Grid } from "@mui/material";
 import FolderCard from "../components/FolderCard";
+import BackButton from '../components/BackButton';
 
 const Favorites = () => {
   return (
     <Box sx={{ mt: 2 }}>
+      <BackButton />
       {/* Title and New Buttons */}
       <Box sx={{ display: "flex", justifyContent: "space-between", mb: 3 }}>
-        <Typography variant="h5" sx={{ color: "#fff" }}>Favorites</Typography>
+        <Typography variant="h5" sx={{ color: "#fff" }}>
+          Favorites
+        </Typography>
         <Box>
           <Button
             variant="contained"
@@ -59,10 +63,20 @@ const Favorites = () => {
       {/* Folder Cards */}
       <Grid container spacing={4}>
         <Grid item xs={12} sm={6} md={4} lg={3}>
-          <FolderCard title="Favorite Paper 1" images={10} size="5 MB" previewImage="src/images/rs paper.jpg"/>
+          <FolderCard
+            title="Favorite Paper 1"
+            images={10}
+            size="5 MB"
+            previewImage="src/images/rs paper.jpg"
+          />
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={3}>
-          <FolderCard title="Favorite Paper 2" images={12} size="15 MB" previewImage="src/images/rs paper.jpg"/>
+          <FolderCard
+            title="Favorite Paper 2"
+            images={12}
+            size="15 MB"
+            previewImage="src/images/rs paper.jpg"
+          />
         </Grid>
       </Grid>
     </Box>
