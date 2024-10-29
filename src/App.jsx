@@ -104,7 +104,7 @@ const App = () => {
 
                 {/* Logo */}
                 <img
-                  src="/src/images/logo3.png" // Replace with actual path to your logo
+                  src="/src/images/logo5.png" // Replace with actual path to your logo
                   alt="RASFO Logo"
                   style={{ height: 80, marginRight: 5 }}
                 />

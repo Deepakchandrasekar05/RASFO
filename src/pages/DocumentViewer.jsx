@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Button, Typography, Paper } from "@mui/material";
 import { useParams, useNavigate } from "react-router-dom";
 import BackButton from "../components/BackButton";
+import { EmbedPDF } from "@simplepdf/react-embed-pdf";
 
 const DocumentViewer = () => {
   const { id } = useParams();
@@ -75,25 +76,36 @@ const DocumentViewer = () => {
           maxHeight: "600vh",
         }}
       >
-        <Button
-          variant="contained"
-          color="#fff"
-          fullWidth
-          sx={{
-            textTransform: "none",
-            padding: 1,
-            fontSize: "16px",
-            borderRadius: 2,
-            bgcolor: "#4F4F4F",
-            "&:hover": {
-              bgcolor: "#4F4F4F",
-              transform: "scale(1.05)",
-              boxShadow: "0 6px 15px rgba(0, 0, 0, 0.2)",
-            },
+        <EmbedPDF
+          companyIdentifier="ql5jg57s"
+          style={{
+            width: "600%",
+            height: "600px",
           }}
+          onLoadSuccess={() => console.log("PDF loaded successfully")}
+          onError={(error) => console.error("Error loading PDF:", error)}
         >
-          Edit Document
-        </Button>
+          <Button
+            sx={{
+              textTransform: "none",
+              width: "100%",
+              color: "#fff",
+              padding: 1,
+              fontSize: "16px",
+              borderRadius: 2,
+              bgcolor: "#4F4F4F",
+              "&:hover": {
+                bgcolor: "#4F4F4F",
+                transform: "scale(1.05)",
+                boxShadow: "0 6px 15px rgba(0, 0, 0, 0.2)",
+              },
+            }}
+            href="https://cdn.simplepdf.com/simple-pdf/assets/example_en.pdf"
+          >
+            Edit Document
+          </Button>
+        </EmbedPDF>
+
         <Button
           variant="contained"
           color="#fff"
